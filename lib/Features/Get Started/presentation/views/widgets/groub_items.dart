@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:test_app/core/utils/router.dart';
 import 'package:test_app/core/utils/textstyles.dart';
 
 class GroubItems extends StatelessWidget {
@@ -32,7 +34,9 @@ class GroubItems extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(AppRouter.kRunView);
+                  },
                   minWidth: 320,
                   height: 56,
                   color: const Color(0xff7B61FF),

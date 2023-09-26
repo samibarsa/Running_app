@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/Features/Get%20Started/presentation/views/get_started_view.dart';
+import 'package:test_app/core/utils/constant.dart';
+import 'package:test_app/core/utils/router.dart';
 
 void main() {
   runApp(const GetStarted());
@@ -10,11 +11,10 @@ class GetStarted extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark()
-          .copyWith(scaffoldBackgroundColor: const Color(0xff28333f)),
-      home: const Getstartedview(),
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimeryColor),
+      routerConfig: AppRouter.router,
     );
   }
 }

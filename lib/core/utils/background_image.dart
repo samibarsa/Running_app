@@ -2,18 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BackGroundImage extends StatelessWidget {
-  const BackGroundImage({super.key, required this.imagePath});
+  const BackGroundImage(
+      {super.key,
+      required this.height,
+      required this.width,
+      required this.imagePath,
+      required this.fit,
+      required this.padding});
   final String imagePath;
+  final BoxFit fit;
+  final EdgeInsetsGeometry padding;
+  final double height;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height,
+      height: height,
       child: Padding(
-        padding: const EdgeInsets.only(top: 101),
+        padding: padding,
         child: SvgPicture.asset(
-          width: MediaQuery.of(context).size.width,
+          width: width,
           imagePath,
-          fit: BoxFit.fill,
+          fit: fit,
         ),
       ),
     );
