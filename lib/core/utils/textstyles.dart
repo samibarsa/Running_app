@@ -9,8 +9,7 @@ abstract class Styles {
       fontWeight: FontWeight.w400,
       fontFamily: 'poppins');
   static const textStyle18 = TextStyle(
-      color: Color(0xffAEA8B2),
-      fontSize: 18,
-      fontWeight: FontWeight.w600,
-      fontFamily: 'poppins');
+      fontSize: 18, fontWeight: FontWeight.w600, fontFamily: 'poppins');
+  static const textStyle21 = TextStyle(
+      fontSize: 21, fontWeight: FontWeight.bold, fontFamily: 'poppins');
 }

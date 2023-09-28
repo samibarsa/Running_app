@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/Features/Get%20Started/presentation/views/widgets/groub_items.dart';
+import 'package:test_app/Features/Get%20Started/presentation/widgets/groub_items.dart';
 import 'package:test_app/core/utils/background_image.dart';
 import 'package:test_app/core/utils/images.dart';
 
