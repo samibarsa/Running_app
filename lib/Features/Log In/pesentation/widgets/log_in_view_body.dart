@@ -15,77 +15,105 @@ class LogInViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(children: [
-        Center(
-          child: BackGroundImage(
-              height: 140,
-              width: 120,
-              imagePath: ImagePath.logo,
-              fit: BoxFit.none,
-              padding: const EdgeInsets.only(top: 24)),
-        ),
-        const Text(
-          "Log In",
-          style: Styles.textStyle21,
-        ),
-        CoustomTextFormField(
-          hinttext: "Dani@gmail.com",
-          hintStyle: Styles.textStyle14
-              .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
-        ),
-        const PassWordFieled(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const CoustomCheckBox(),
-            const SizedBox(
-              width: 12,
-            ),
-            Text(
-              "Remember Me ",
-              style: Styles.textStyle14.copyWith(color: Colors.white),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(children: [
+            Center(
+              child: BackGroundImage(
+                  height: 140,
+                  width: 120,
+                  imagePath: ImagePath.logo,
+                  fit: BoxFit.none,
+                  padding: const EdgeInsets.only(top: 24)),
             ),
             const SizedBox(
-              width: 84,
+              height: 88,
             ),
-            Text("Forgot Password ?",
-                style: Styles.textStyle14.copyWith(
-                    color: const Color(0xff7B61FF),
-                    fontWeight: FontWeight.w400,
-                    fontFamily: 'Lato'))
-          ],
-        ),
-        const CoustomBoutton(
-          minwidth: 330,
-          textbutton: "Log in",
-        ),
-        const CoustomDivider(),
-        Row(
-          children: [
-            SvgPicture.asset(ImagePath.googlelogo),
-            SvgPicture.asset(ImagePath.facebook),
-            SvgPicture.asset(ImagePath.twitter),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "New User?",
-              style: Styles.textStyle14.copyWith(color: Colors.white),
+            const Text(
+              "Log In",
+              style: Styles.textStyle21,
             ),
-            GestureDetector(
-                onTap: () {},
-                child: Text(
-                  " Sign Up",
-                  style: Styles.textStyle14
-                      .copyWith(color: const Color(0xff677FFF)),
-                )),
-          ],
-        )
-      ]),
-    ));
+            const SizedBox(
+              height: 16,
+            ),
+            CoustomTextFormField(
+              hinttext: "Dani@gmail.com",
+              hintStyle: Styles.textStyle14
+                  .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            const PassWordFieled(),
+            const SizedBox(
+              height: 12,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const CoustomCheckBox(),
+                const SizedBox(
+                  width: 12,
+                ),
+                Text(
+                  "Remember Me ",
+                  style: Styles.textStyle14.copyWith(color: Colors.white),
+                ),
+                const SizedBox(
+                  width: 84,
+                ),
+                Text("Forgot Password ?",
+                    style: Styles.textStyle14.copyWith(
+                        color: const Color(0xff7B61FF),
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Lato'))
+              ],
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            const CoustomBoutton(
+              minwidth: 330,
+              textbutton: "Log in",
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const CoustomDivider(),
+            const SizedBox(
+              height: 13,
+            ),
+            Row(
+              children: [
+                SvgPicture.asset(ImagePath.googlelogo),
+                SvgPicture.asset(ImagePath.facebook),
+                SvgPicture.asset(ImagePath.twitter),
+              ],
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "New User?",
+                  style: Styles.textStyle14.copyWith(color: Colors.white),
+                ),
+                GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      " Sign Up",
+                      style: Styles.textStyle14
+                          .copyWith(color: const Color(0xff677FFF)),
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 34,
+            )
+          ]),
+        ));
   }
 }

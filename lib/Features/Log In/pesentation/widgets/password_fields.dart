@@ -12,7 +12,7 @@ class PassWordFieled extends StatefulWidget {
 }
 
 class _PassWordFieledState extends State<PassWordFieled> {
-  bool obscuretext = false;
+  bool obscuretext = true;
   @override
   Widget build(BuildContext context) {
     return CoustomTextFormField(
