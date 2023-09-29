@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:test_app/Features/Get%20Started/presentation/widgets/custom_button.dart';
-import 'package:test_app/Features/Log%20In/pesentation/widgets/cosyum_checkbox.dart';
-import 'package:test_app/Features/Log%20In/pesentation/widgets/coustom_Textform_field.dart';
 import 'package:test_app/Features/Log%20In/pesentation/widgets/coustom_divider.dart';
+import 'package:test_app/Features/Log%20In/pesentation/widgets/email_textformfiled.dart';
+import 'package:test_app/Features/Log%20In/pesentation/widgets/go_to_sign_up.dart';
+import 'package:test_app/Features/Log%20In/pesentation/widgets/log_in_sochialmedia.dart';
+import 'package:test_app/Features/Log%20In/pesentation/widgets/login_logo.dart';
 import 'package:test_app/Features/Log%20In/pesentation/widgets/password_fields.dart';
-import 'package:test_app/core/utils/background_image.dart';
-import 'package:test_app/core/utils/images.dart';
+import 'package:test_app/Features/Log%20In/pesentation/widgets/remeberme.dart';
 import 'package:test_app/core/utils/textstyles.dart';
 
 class LogInViewBody extends StatelessWidget {
@@ -19,14 +19,7 @@ class LogInViewBody extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(children: [
-            Center(
-              child: BackGroundImage(
-                  height: 140,
-                  width: 120,
-                  imagePath: ImagePath.logo,
-                  fit: BoxFit.none,
-                  padding: const EdgeInsets.only(top: 24)),
-            ),
+            const LoginLogo(),
             const SizedBox(
               height: 88,
             ),
@@ -37,11 +30,7 @@ class LogInViewBody extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            CoustomTextFormField(
-              hinttext: "Dani@gmail.com",
-              hintStyle: Styles.textStyle14
-                  .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
-            ),
+            const EmailTextFormFiled(),
             const SizedBox(
               height: 12,
             ),
@@ -49,31 +38,12 @@ class LogInViewBody extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const CoustomCheckBox(),
-                const SizedBox(
-                  width: 12,
-                ),
-                Text(
-                  "Remember Me ",
-                  style: Styles.textStyle14.copyWith(color: Colors.white),
-                ),
-                const SizedBox(
-                  width: 84,
-                ),
-                Text("Forgot Password ?",
-                    style: Styles.textStyle14.copyWith(
-                        color: const Color(0xff7B61FF),
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'Lato'))
-              ],
-            ),
+            const Remeberme(),
             const SizedBox(
               height: 24,
             ),
-            const CoustomBoutton(
+            CoustomBoutton(
+              onPressed: () {},
               minwidth: 330,
               textbutton: "Log in",
             ),
@@ -84,32 +54,11 @@ class LogInViewBody extends StatelessWidget {
             const SizedBox(
               height: 13,
             ),
-            Row(
-              children: [
-                SvgPicture.asset(ImagePath.googlelogo),
-                SvgPicture.asset(ImagePath.facebook),
-                SvgPicture.asset(ImagePath.twitter),
-              ],
-            ),
+            const LoginSochialMedia(),
             const SizedBox(
               height: 40,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "New User?",
-                  style: Styles.textStyle14.copyWith(color: Colors.white),
-                ),
-                GestureDetector(
-                    onTap: () {},
-                    child: Text(
-                      " Sign Up",
-                      style: Styles.textStyle14
-                          .copyWith(color: const Color(0xff677FFF)),
-                    )),
-              ],
-            ),
+            const GoToSignUp(),
             const SizedBox(
               height: 34,
             )

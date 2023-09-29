@@ -14,26 +14,27 @@ class GroubItems extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      child: const Padding(
-        padding: EdgeInsets.only(bottom: 48),
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 48),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(
+            const Text(
               "Running App",
               style: Styles.textStyle30,
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               "Run and earn with our app. Some text\n Example will be her",
               style: Styles.textStyle14,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Padding(
-              padding: EdgeInsets.only(top: 0),
+              padding: const EdgeInsets.only(top: 0),
               child: CoustomBoutton(
                 textbutton: "Get Started",
+                onPressed: () {},
               ),
             )
           ],

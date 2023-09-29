@@ -4,12 +4,13 @@ import 'package:test_app/core/utils/router.dart';
 import 'package:test_app/core/utils/textstyles.dart';
 
 class CoustomBoutton extends StatelessWidget {
-  const CoustomBoutton({
-    super.key,
-    required this.textbutton,
-    this.minwidth = 320,
-  });
+  const CoustomBoutton(
+      {super.key,
+      required this.textbutton,
+      this.minwidth = 320,
+      required void Function()? onPressed});
   final String textbutton;
+
   final double minwidth;
   @override
   Widget build(BuildContext context) {
